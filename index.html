@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food and Culture Around the World</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf0;
+      color: #333;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.8em;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 20px;
+      animation: slideUp 2s ease;
+    }
+
+    nav {
+      background-color: #ff6f61;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffe;
+    }
+
+    section {
+      padding: 50px 10%;
+      animation: fadeInUp 1s ease;
+    }
+
+    h2 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+      font-size: 2.3em;
+      text-align: center;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro img {
+      width: 80%;
+      border-radius: 15px;
+      margin-top: 20px;
+      transition: transform 0.5s;
+    }
+
+    .intro img:hover {
+      transform: scale(1.03);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      background-color: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffe;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Food and Culture Around the World</h1>
+  </header>
+
+  <nav>
+    <a href="#intro">Home</a>
+    <a href="#cuisine">World Cuisine</a>
+    <a href="#festivals">Food Festivals</a>
+    <a href="#traditions">Cultural Traditions</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <section id="intro" class="intro">
+    <h2>Introduction</h2>
+    <p>
+      Food connects people and reflects their cultural identity. From spicy Indian curries to Italian pasta, from Japanese sushi to Mexican tacos — 
+      every dish tells a story of heritage, passion, and celebration.
+    </p>
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80" alt="Global Food">
+  </section>
+
+  <section id="cuisine">
+    <h2>World Cuisine</h2>
+    <div class="grid">
+      <div class="card">
+        
+        <div class="card-content">
+          <h3>Indian Cuisine</h3>
+          <p>India’s diverse flavors range from butter chicken and biryani to idli and dosa — each region offering a unique spice journey.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Italian Cuisine</h3>
+          <p>Italian food celebrates simplicity — pizza, pasta, risotto, and fresh herbs create harmony in every bite.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        
+        <div class="card-content">
+          <h3>Japanese Cuisine</h3>
+          <p>From sushi to ramen, Japanese food emphasizes balance, presentation, and natural flavors.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        
+        <div class="card-content">
+          <h3>Mexican Cuisine</h3>
+          <p>Tacos, enchiladas, and guacamole highlight the bold, colorful, and spicy side of Mexican food culture.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        
+        <div class="card-content">
+          <h3>Chinese Cuisine</h3>
+          <p>Chinese food blends flavor and tradition — from dim sum and noodles to fried rice and sweet-sour dishes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="festivals">
+    <h2>Food Festivals Around the World</h2>
+    <div class="grid">
+      <div class="card">
+        
+        <div class="card-content">
+          <h3>Thailand’s Songkran</h3>
+          <p>Songkran celebrates the Thai New Year with street food, water fights, and traditional dishes served in joy.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        
+        <div class="card-content">
+          <h3>Spain’s La Tomatina</h3>
+          <p>In Buñol, Spain, thousands gather to throw tomatoes — followed by a giant feast of tapas and paella!</p>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h3>India’s Diwali Sweets</h3>
+          <p>During Diwali, homes glow with lights and are filled with sweets like laddoos, barfis, and jalebis shared with love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="traditions">
+    <h2>Cultural Traditions Around Food</h2>
+    <p>
+      Food reflects gratitude, unity, and respect.  <br>
+      🍱 In Japan, people say “Itadakimasu” before eating.  <br>
+      🍛 In India, sharing a meal is an act of love and respect.  <br>
+      🍝 In Italy, long dinners symbolize family togetherness.  <br>
+    </p>
+    
+
+  <section id="gallery">
+    <h2>Global Food Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?auto=format&fit=crop&w=800&q=80" alt="Street Food">
+      <img src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?auto=format&fit=crop&w=800&q=80" alt="Sushi">
+      <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Indian Thali">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Dessert">
+      <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=800&q=80" alt="Chinese Noodles">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Food and Culture Explorer | <a href="https://www.worldtravelguide.net/" target="_blank">Discover More</a></p>
+  </footer>
+
+</body>
+</html>
